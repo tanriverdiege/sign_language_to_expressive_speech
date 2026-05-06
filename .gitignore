@@ -6,5 +6,5 @@ __pycache__/
 .DS_Store
 .github
 *.tsv
-*.mp4
+/data/sign_language_videos
 outputs/
