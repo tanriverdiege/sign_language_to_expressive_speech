@@ -140,7 +140,6 @@ class SonarTranslator:
             dtype=self.dtype,
         )
 
-        print("Loading translator")
         load_model(
             encoder, Path(self.config.pretrained_model_path), model_key="student"
         )

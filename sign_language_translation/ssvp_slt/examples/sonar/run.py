@@ -5,11 +5,16 @@
 # LICENSE file in the root directory of this source tree.
 # --------------------------------------------------------
 
+import logging
 import os
 import time
+import warnings
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional, Sequence, Tuple
+
+warnings.filterwarnings("ignore")
+logging.getLogger("fairseq2").setLevel(logging.WARNING)
 
 import hydra
 import torch
@@ -22,9 +27,9 @@ from ssvp_slt.util.video import Preprocessor
 
 def print_translations(keys: Sequence[str], translations: Sequence[str]) -> None:
     assert len(keys) == len(translations)
-    print(f"\nTranslations:\n{'-'*50}")
+    print(f"\nTranslation:\n{'-'*50}")
     for key, translation in zip(keys, translations):
-        print(f'{key}: "{translation}"')
+        print(f'"{translation}"')
     print(f"{'-' * 50}\n")
 
 

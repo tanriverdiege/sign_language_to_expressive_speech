@@ -1,0 +1,2 @@
+[2026-05-06 10:21:00,851][fairseq2][INFO] - Using the cached checkpoint of text_sonar_basic_decoder. Set `force` to `True` to download again.
+[2026-05-06 10:21:05,250][fairseq2][INFO] - Using the cached tokenizer of text_sonar_basic_encoder. Set `force` to `True` to download again.

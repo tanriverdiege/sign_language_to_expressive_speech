@@ -1,0 +1,5 @@
+- video_path=/root/.cache/asl/0043626-2023.1.4.mp4
+- preprocessing.detector_path=sign_language_translation/ssvp_slt/examples/sonar/mmod_human_face_detector.dat
+- feature_extraction.pretrained_model_path=/root/.cache/asl/dm_70h_ub_signhiera.pth
+- translation.pretrained_model_path=/root/.cache/asl/dm_70h_ub_sonar_encoder.pth
+- translation.tgt_langs=[eng_Latn, fra_Latn, deu_Latn, zho_Hans]

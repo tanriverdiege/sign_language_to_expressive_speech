@@ -714,7 +714,7 @@ def load_model(
         k for k in unexpected_keys if not k.startswith(SIGNHIERA_EXPECTED_EXTRA)
     ]
     if not (missing_keys or unexpected_keys):
-        print("All keys matched successfully\n")
+        pass  # All keys matched successfully
     else:
         print(f"{missing_keys = }, {unexpected_keys = }\n")
 
@@ -735,7 +735,6 @@ class FeatureExtractor:
             pretrained=False, strict=False
         )
 
-        print("Loading feature extractor")
         load_model(model, Path(self.config.pretrained_model_path))
 
         model.head = nn.Identity()

@@ -520,7 +520,6 @@ def load_model(
     with pathmgr.open(checkpoint_path, "rb") as f:
         checkpoint = torch.load(f, map_location="cpu")
 
-    print(f"Load pre-trained checkpoint from: {checkpoint_path}")
 
     # Try all of these if necessary
     for candidate_key in [model_key, "model", "model_state"]:
@@ -538,8 +537,7 @@ def load_model(
         else:
             new_checkpoint_model[k] = v
 
-    msg = model.load_state_dict(new_checkpoint_model, strict=False)
-    print(msg)
+    model.load_state_dict(new_checkpoint_model, strict=False)
 
 
 def load_checkpoint(
