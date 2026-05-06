@@ -26,13 +26,9 @@ for checksum in "${CHECKSUMS[@]}"; do
     fi
 done
 
-
-#echo -e "\nExtracting archives"
-#for file in "${FILES[@]}"; do
-#    tar -xvf "$file"
-#done
-
-#prefix="$(pwd)/dailymoth-70h"
-#echo -e "\nCreating symlinks"
-#ln -s "$prefix"/manifests "$prefix"/unblurred_clips/manifests
-#ln -s "$prefix"/manifests "$prefix"/blurred_clips/manifests
+tar --no-same-owner -xvzf manifests.tar.gz
+tar --no-same-owner -xvzf unblurred_clips.tar.gz
+rm -r manifests.tar.gz
+rm -r unblurred_clips.tar.gz
+mkdir sign_language_videos
+mv dailymoth-70h sign_language_videos
