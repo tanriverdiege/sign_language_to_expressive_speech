@@ -205,6 +205,6 @@ echo "  https://github.com/davisking/dlib-models"
 echo "  (e.g. mmod_human_face_detector.dat)"
 echo ""
 
-cd /root/ssvp_slt/examples/sonar
-wget -q "http://dlib.net/files/mmod_human_face_detector.dat.bz2"
-bzip2 -d mmod_human_face_detector.dat.bz2
+#cd /root/ssvp_slt/examples/sonar
+#wget -q "http://dlib.net/files/mmod_human_face_detector.dat.bz2"
+#bzip2 -d mmod_human_face_detector.dat.bz2
