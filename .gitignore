@@ -1,0 +1,6 @@
+sign_language_translation/ssvp_slt/examples/sonar/mmod_human_face_detector.dat
+sign_language_translation/ssvp_slt/examples/sonar/outputs/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
