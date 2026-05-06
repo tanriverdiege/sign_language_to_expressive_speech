@@ -89,7 +89,7 @@ class TranslationConfig:
 
 @dataclass
 class RunConfig:
-    video_path: str = MISSING
+    video_paths: List[str] = MISSING
     preprocessing: PreprocessingConfig = PreprocessingConfig()
     feature_extraction: FeatureExtractionConfig = FeatureExtractionConfig()
     translation: TranslationConfig = TranslationConfig()
@@ -124,13 +124,14 @@ def main(config: DictConfig):
     if config.verbose:
         print(f"Model loading: {t1 - t0:.3f}s")
 
-    inputs = preprocessor(Path(config.video_path))
-    extracted_features = feature_extractor(**inputs)
-
     kwargs = {"tgt_langs": config.translation.tgt_langs}
-    translations = translator(extracted_features, **kwargs)["translations"]
 
-    print_translations(config.translation.tgt_langs, translations)
+    for video_path in config.video_paths:
+        print(f"\n==> {video_path}")
+        inputs = preprocessor(Path(video_path))
+        extracted_features = feature_extractor(**inputs)
+        translations = translator(extracted_features, **kwargs)["translations"]
+        print_translations(config.translation.tgt_langs, translations)
 
 
 if __name__ == "__main__":
