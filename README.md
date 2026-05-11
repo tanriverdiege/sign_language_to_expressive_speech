@@ -1,4 +1,4 @@
-# Sign Language to Expressive Speech
+# Sign Language Translation
 
 A repository by **Ahmet Ege Tanriverdi** as part of the Bogazici University Electrical and Electronics Engineering Final Design Project.
 
