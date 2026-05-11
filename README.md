@@ -1,6 +1,6 @@
 # Sign Language Translation
 
-A repository by **Ahmet Ege Tanriverdi** as part of the Bogazici University Electrical and Electronics Engineering Final Design Project.
+A repository by **Ahmet Ege Tanriverdi** and **Melih Kayhan Pala**  as part of the Bogazici University Electrical and Electronics Engineering Final Design Project.
 
 This repository provides a ready-to-run pipeline for translating **American Sign Language (ASL) videos into English text**, built on top of Meta's [SONAR](https://github.com/facebookresearch/SONAR) and [ssvp_slt](https://github.com/facebookresearch/ssvp_slt) models. It is designed to be a practical starting point for anyone looking to implement sign language translation without having to piece together multiple research repositories.
 
