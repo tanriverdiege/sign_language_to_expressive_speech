@@ -16,14 +16,10 @@
 #   - fairseq2 requires numpy~=1.23. We pin numpy=1.26.4 and protect it with
 #     a pip constraints file so requirements.txt cannot upgrade to numpy 2.x.
 #
-# Usage:
-#   bash setup_demo_env.sh [env_name]
-#   conda activate ${env_name:-ssvp_slt_demo}
-#   cd examples/sonar && ./demo.sh /path/to/dlib/detector_model.dat
 
 set -euo pipefail
 
-ENV_NAME="${1:-ssvp_slt_demo}"
+ENV_NAME="${1:-slt}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONDA_RUN="conda run --no-capture-output -n $ENV_NAME"
 
@@ -205,6 +201,6 @@ echo "  https://github.com/davisking/dlib-models"
 echo "  (e.g. mmod_human_face_detector.dat)"
 echo ""
 
-#cd /root/ssvp_slt/examples/sonar
+#cd /root/sign_language_to_expressive_speech/sign_language_translation/ssvp_slt/examples/sonar
 #wget -q "http://dlib.net/files/mmod_human_face_detector.dat.bz2"
 #bzip2 -d mmod_human_face_detector.dat.bz2
