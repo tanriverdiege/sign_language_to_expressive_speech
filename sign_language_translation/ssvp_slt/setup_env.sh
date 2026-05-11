@@ -187,20 +187,18 @@ print(f'  SonarTranslator: OK')
 
 echo ""
 echo "======================================================"
+echo " Downloading dlib face detector model"
+echo "======================================================"
+DLIB_DAT="$SCRIPT_DIR/examples/sonar/mmod_human_face_detector.dat"
+if [ -f "$DLIB_DAT" ]; then
+    echo " - Already exists, skipping download."
+else
+    wget "http://dlib.net/files/mmod_human_face_detector.dat.bz2" -P "$SCRIPT_DIR/examples/sonar/"
+    bzip2 -d "$SCRIPT_DIR/examples/sonar/mmod_human_face_detector.dat.bz2"
+fi
+
+echo ""
+echo "======================================================"
 echo " Setup complete!"
 echo "======================================================"
 echo ""
-echo "Activate and run the demo:"
-echo ""
-echo "  conda activate $ENV_NAME"
-echo "  cd $SCRIPT_DIR/examples/sonar"
-echo "  ./demo.sh /path/to/dlib/detector_model.dat"
-echo ""
-echo "Download a dlib face detector from:"
-echo "  https://github.com/davisking/dlib-models"
-echo "  (e.g. mmod_human_face_detector.dat)"
-echo ""
-
-#cd /root/sign_language_to_expressive_speech/sign_language_translation/ssvp_slt/examples/sonar
-#wget -q "http://dlib.net/files/mmod_human_face_detector.dat.bz2"
-#bzip2 -d mmod_human_face_detector.dat.bz2
